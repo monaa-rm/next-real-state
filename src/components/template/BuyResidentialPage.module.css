@@ -1,0 +1,64 @@
+.container {
+
+    margin-top: 20px;
+  }
+  .card_container{
+    border: 2px solid #304ffe58;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .main_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* تعداد کارت‌ها در هر سطر */
+    gap: 10px;
+  }
+  
+  .sidebar {
+    display: flex;
+
+    align-items: center;
+    height: fit-content;
+    padding: 5px 8px;
+    border-radius: 10px;
+    box-shadow: #304ffe4a 0px 4px 15px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .main {
+    width: 100%;
+    /* display: flex; */
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .text {
+    background-color: rgba(219, 5, 5, 0.159);
+    color: rgb(219, 5, 5);
+    font-size: 1.3rem;
+    padding: 10px 15px;
+    border-radius: 10px;
+    height: 50px;
+  }
+  
+  @media (min-width: 600px) {
+ 
+    .container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 80px;
+    }
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: fit-content;
+      padding: 30px 15px;
+      border-radius: 10px;
+      box-shadow: #304ffe4a 0px 4px 15px;
+      margin-left: 40px;
+      width: 220px;
+    }
+  }

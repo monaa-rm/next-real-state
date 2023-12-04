@@ -1,0 +1,13 @@
+.text {
+    background-color: rgba(219, 5, 5, 0.159);
+    color: rgb(219, 5, 5);
+    font-size: 1.3rem;
+    padding: 10px 15px;
+    border-radius: 10px;
+  }
+  .card_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 12fr)); /* تعداد کارت‌ها در هر سطر */
+    gap: 10px;
+  }
+  

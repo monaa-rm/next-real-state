@@ -1,0 +1,30 @@
+.text {
+  background-color: rgba(219, 5, 5, 0.159);
+  color: rgb(219, 5, 5);
+  font-size: 1.3rem;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+.card_container {
+  border: 2px solid #304ffe58;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.main_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* تعداد کارت‌ها در هر سطر */
+  gap: 10px;
+}
+.container_button {
+  background-color: #00a800;
+  border: none;
+  padding: 5px 15px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all ease-in 0.1s;
+}

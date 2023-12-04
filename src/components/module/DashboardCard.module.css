@@ -1,0 +1,52 @@
+.container {
+  border: 2px solid #304ffe58;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  position: relative;
+
+}
+
+.main {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding:10px 15px ;
+  width: 100%;
+}
+
+.main button {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 45%;
+  background-color: #fff;
+  cursor: pointer;
+  height: 30px;
+  border-radius: 8px;
+  font-size: 1rem;
+  border: 1px solid rgb(0, 168, 0);
+  color: rgb(0, 168, 0);
+}
+
+.main svg {
+  font-size: 1.1rem;
+  margin-right: 7px;
+  margin-bottom: 5px;
+}
+
+.main button:last-child {
+  border: 1px solid #db0505;
+  color: #db0505;
+}
+.publisStyle {
+  position: absolute;
+  z-index: 10;
+  background-color: #304ffe;
+  top: 10px;
+  left: 10px;
+  font-size: 12px;
+  color: #fff;
+  padding: 3px 5px;
+  border-radius: 2px;
+}

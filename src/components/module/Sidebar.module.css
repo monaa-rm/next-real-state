@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    align-items: center;
+
+  }
+  .container p {
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-left: 10px;
+  }
+  
+  .container p svg {
+    margin-left: 5px;
+    font-size: 1.3rem;
+    color: #304ffe !important;
+  }
+  
+  .container a {
+    color: grey;
+    margin: 5px;
+  }
+  .container span {
+    display: none;
+  }
+
+  @media (min-width: 600px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+    .container span {
+      display: block;
+    }
+  }
