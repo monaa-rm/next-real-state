@@ -41,7 +41,7 @@ const Card = ({
         <div className={styles.container}>
           <div className={styles.card}>
             {images.length ? (
-              <img src={images[0]} alt="image" />
+              <Image src={images[0]} width="250" height="200" alt="image" />
             ) : (
               <div className={styles.no_image}>
                 <CiImageOff />
@@ -63,7 +63,6 @@ const Card = ({
                 رهن: {sp(earnest)}، اجاره: {sp(rentMoney)}
               </span>
             ) : null}
-            {/* <span>{sp (price)} تومان</span> */}
           </div>
         </div>
       </Link>

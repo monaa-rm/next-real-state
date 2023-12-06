@@ -10,7 +10,6 @@ const Dashboard = async () => {
   const session = await getServerSession(authOptions);
   if (!session) redirect("/signin")
   const user = await User.findOne({ email: session.user.email });
-  console.log(user)
   return <DashboardPage createdAt={user.createdAt} />;
 };
 

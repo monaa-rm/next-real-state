@@ -21,8 +21,8 @@ const Sidebar = () => {
       <Link href="/buy-residential"> همه </Link>
 
       </div>
-      {Object.keys(categories).map((query) => (
-        <div>
+      {Object.keys(categories).map((query, index) => (
+        <div key={index}>
         <Link
           href={{ pathname: "/buy-residential", query: { category: query } }}
         >

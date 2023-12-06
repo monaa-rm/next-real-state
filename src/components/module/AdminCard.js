@@ -37,7 +37,7 @@ const AdminCard = ({
   const publishHandler = async () => {
     const res = await fetch(`api/publish/${_id}`, { method: "PATCH" });
     const data = await res.json();
-    console.log(data);
+   
 
     if (data.message) {
       toast.success(data.message);
@@ -49,7 +49,6 @@ const AdminCard = ({
   const deleteHandler = async () => {
     const res = await fetch(`api/publish/${_id}`, { method: "DELETE" });
     const data = await res.json();
-    console.log(data);
     if (data.message) {
       toast.success(data.message);
       router.refresh();

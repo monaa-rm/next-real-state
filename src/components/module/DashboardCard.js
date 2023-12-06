@@ -21,7 +21,6 @@ const DashboardCard = ({ data }) => {
       });
       const result = await res.json();
       if (result.error) {
-        console.log(result.error);
         toast.error(result.error);
       } else {
         toast.success(result.message);

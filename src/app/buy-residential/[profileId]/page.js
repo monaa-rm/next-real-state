@@ -5,7 +5,6 @@ import connectDB from "@/utils/ConnectDB"
 const ProfileDetails = async ({params : {profileId}}) => {
 await connectDB();
 const profile = await Profile.findOne({_id : profileId});
-console.log(profile)
 
 if(!profile) return <h3>مشکلی پیش آمده است</h3>
 

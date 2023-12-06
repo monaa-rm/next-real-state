@@ -42,8 +42,6 @@ const AddProfilePage = ({ data }) => {
 
   const submitHandler = async () => {
     setLoading(true);
-    console.log("abc",profileData.rules)
-    console.log("abc",profileData.amenities)
     const formData = new FormData();
     formData.append("title", profileData.title);
     formData.append("description", profileData.description);
@@ -56,20 +54,16 @@ const AddProfilePage = ({ data }) => {
     formData.append("realState", profileData.realState);
     formData.append("constructionDate", profileData.constructionDate);
     formData.append("category", profileData.category);
-    // formData.append("rules", profileData.rules);
-    // formData.append("amenities", profileData.amenities);
+
 
     profileData.rules.forEach((rule, index) => {
-      console.log(rule)
+     
       formData.append(`rules-[${index}]`, rule);
     });
 
     profileData.amenities.forEach((amenity, index) => {
-      console.log(amenity)
-
       formData.append(`amenities-[${index}]`, amenity);
     });
-
 
     if (profileData.images) {
       profileData.images.map((image, index) =>
@@ -81,13 +75,11 @@ const AddProfilePage = ({ data }) => {
         method: "POST",
         body: formData,
       });
-      console.log(res);
       const data = await res.json();
       if (data.error) {
         toast.error(data.error);
       } else {
         toast.success(data.message);
-        console.log(formData)
         setProfileData({
           title: "",
           description: "",
@@ -111,12 +103,11 @@ const AddProfilePage = ({ data }) => {
     } catch (error) {
       toast.error("خطا در ارسال درخواست");
       setLoading(false);
-      console.log("error-----------", error);
+      console.log("error", error);
     }
   };
 
   const editHandler = async () => {
-    console.log(profileData);
     setLoading(true);
     const formData = new FormData();
     formData.append("_id", data._id);
@@ -131,24 +122,17 @@ const AddProfilePage = ({ data }) => {
     formData.append("realState", profileData.realState);
     formData.append("constructionDate", profileData.constructionDate);
     formData.append("category", profileData.category);
-    // formData.append("rules", profileData.rules);
-    // formData.append("amenities", profileData.amenities);
 
     profileData.rules.forEach((rule, index) => {
-      console.log(rule)
       formData.append(`rules[${index}]`, rule);
     });
 
     profileData.amenities.forEach((amenity, index) => {
-      console.log(amenity)
-
       formData.append(`amenities[${index}]`, amenity);
     });
 
     if (profileData.images) {
-
       profileData.images.map((image, index) => {
-        console.log(image);
         formData.append(`images-${index}`, profileData.images[index]);
       });
     }
@@ -159,7 +143,7 @@ const AddProfilePage = ({ data }) => {
         body: formData,
       });
       const data = await res.json();
-      console.log(data);
+
       if (data.error) {
         toast.error(data.error);
       } else {
