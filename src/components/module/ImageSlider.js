@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import styles from "@/module/ImageSlider.module.css";
+import Image from "next/image";
 
 const ImageSlider = ({images}) => {
     
@@ -26,7 +27,7 @@ const ImageSlider = ({images}) => {
             <Slider {...settings}>
               {images.map((src, index) => (
                 <div key={index}>
-                  <img src={src} alt="alt" className={styles.image} />
+                  <Image src={src} alt="alt" width="500" layout="responsive"  height="300" className={styles.image} />
                 </div>
               ))}
             </Slider>
