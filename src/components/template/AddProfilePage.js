@@ -13,6 +13,7 @@ import { Toaster, toast } from "react-hot-toast";
 import RentOrSale from "@/module/RentOrSaleList";
 
 const AddProfilePage = ({ data }) => {
+  
   const [profileData, setProfileData] = useState({
     title: "",
     description: "",
@@ -38,7 +39,7 @@ const AddProfilePage = ({ data }) => {
     if (data) {
       setProfileData(data);
     }
-  }, []);
+  }, [data]);
 
   const submitHandler = async () => {
     setLoading(true);

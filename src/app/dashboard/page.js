@@ -6,10 +6,12 @@ import { redirect } from "next/navigation";
 import connectDB from "@/utils/ConnectDB";
 
 const Dashboard = async () => {
-  await connectDB()
+  await connectDB();
   const session = await getServerSession(authOptions);
-  if (!session) redirect("/signin")
+  console.log("session", session);
+  if (!session) redirect("/signin");
   const user = await User.findOne({ email: session.user.email });
+
   return <DashboardPage createdAt={user.createdAt} />;
 };
 
